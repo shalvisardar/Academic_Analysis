@@ -40,7 +40,8 @@ Unlike traditional reporting systems, this solution provides **real-time interac
 | Database         | PostgreSQL, DBeaver               |
 | Visualization    | Power BI                          |
 | Development      | Jupyter Notebook                  |
-</br></br>
+
+</br>
 
 ## System Architecture
 
@@ -61,14 +62,12 @@ PostgreSQL Database (Star Schema)
      ↓
 Power BI Dashboard (Visualization Layer)
 ```
-</br></br>
 
 ## ML Model: Predictive Risk Analysis
 
 ### Model Selection
 **Logistic Regression** was selected due to its **high interpretability** and efficiency with structured tabular data.
 
----
 
 ### Target Variable
 Binary Classification:
@@ -76,25 +75,23 @@ Binary Classification:
 - 1 → At Risk (Fail / Withdrawn)
 - 0 → Safe (Pass / Distinction)
 
----
 
 ### Features Used
-**Demographic Attributes:**
+Demographic Attributes:
 - Age
 - Gender
 - Highest Education
 - IMD Band (Socioeconomic Indicator)
 - Disability
 
-**Engagement Metrics:**
+Engagement Metrics:
 - Site interaction counts (VLE activity)
 
-**Academic Details:**
+Academic Details:
 - Course Module
 - Batch
 - Assessment Scores
 
----
 
 ### Optimization Techniques
 - **StandardScaler:** Normalizes numerical features to ensure proportional contribution during training
@@ -111,6 +108,7 @@ The model achieved an overall accuracy of **87.33%**, indicating strong reliabil
 | Accuracy  | 87.33% | High overall correctness       |
 | Precision | 90.74% | Minimizes false alarms         |
 | Recall    | 85.09% | Captures most at-risk students |
+
 </br></br>
 
 ## Database Design
@@ -124,6 +122,7 @@ To ensure high-speed dashboard performance, a **Star Schema** was implemented:
 ### Dimension Tables
 - `student_score_details` → Assessment-level data
 - `prediction_data` → ML-based at-risk classification
+
 </br></br>
 
 ## Data Analysis & Insights
@@ -134,7 +133,6 @@ To ensure high-speed dashboard performance, a **Star Schema** was implemented:
 - **Average Engagement:** Mean interaction count per student/course
 - **Model Precision & Recall:** Dynamically updated per course selection
 
----
 
 ### Institution-Level Insights
 
@@ -146,7 +144,6 @@ The analysis highlights strong relationships between **engagement, academic perf
 - Students with disabilities exhibit slightly elevated risk levels
 - Socioeconomic factors influence performance, though moderated by course structure
 
----
 
 ### Course CCC - High-Risk Analysis
 
@@ -160,7 +157,6 @@ Students with lower educational backgrounds are especially vulnerable, suggestin
 
 *This makes CCC a **priority course for academic intervention**.*
 
----
 
 ### Course GGG – High Retention Outlier
 
@@ -180,7 +176,7 @@ This contradicts the general trend, suggesting:
 
 ### 1. University Overview
 
-![University Overview](images\page_1_university_overview.png)
+![University Overview](images/page_1_university_overview.png)
 
 - Institutional KPIs (Total Students, Avg Score, Engagement, Retention)
 - Performance distribution
@@ -188,7 +184,7 @@ This contradicts the general trend, suggesting:
 
 ### 2. Course Analysis
 
-![Course Analysis](images\page_2_course_analysis.png)
+![Course Analysis](images/page_2_course_analysis.png)
 
 - Course-level KPIs
 - At-risk student identification
@@ -196,7 +192,7 @@ This contradicts the general trend, suggesting:
 
 ### 3. Student Analysis
 
-![Student Analysis](images\page_3_student_analysis.png)
+![Student Analysis](images/page_3_student_analysis.png)
 
 - Individual KPIs (Score, Credits, Engagement, Final Result)
 - Demographic insights
@@ -204,7 +200,7 @@ This contradicts the general trend, suggesting:
 
 ### 4. At-Risk Dashboard
 
-![At-Risk Dashboard](images\page_4_at_risk_analysis.png)
+![At-Risk Dashboard](images/page_4_at_risk_analysis.png)
 
 - Model KPIs (Accuracy, Precision, Recall, % At-Risk)
 - Demographic risk segmentation
